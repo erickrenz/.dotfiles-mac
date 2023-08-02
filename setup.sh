@@ -18,7 +18,6 @@ brew install git ansible -q
 echo "[3/4] Cloning repository..."
 cd /Users/erickrenz/
 git clone -q https://github.com/erickrenz/.dotfiles-mac.git
-chown -hR erickrenz .dotfiles/
 cd /Users/erickrenz/.dotfiles-mac/
 
 # Run ansible playbook
