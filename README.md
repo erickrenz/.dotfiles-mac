@@ -15,6 +15,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/erickrenz/.dotfiles-mac/ma
 ### Usage
 
 ```bash
-# Install ONLY GLOBAL packages and tools
 ansible-playbook playbook.yaml
 ```
