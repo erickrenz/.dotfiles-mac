@@ -19,7 +19,7 @@ echo "[3/4] Cloning repository..."
 cd /Users/erickrenz/
 git clone -q https://github.com/erickrenz/.dotfiles-mac.git
 chown -hR erickrenz .dotfiles/
-cd /home/erickrenz/.dotfiles-mac/
+cd /Users/erickrenz/.dotfiles-mac/
 
 # Run ansible playbook
 echo "[4/4] Running playbook..."
