@@ -9,7 +9,7 @@ This goal of this project is to quickly get a development system up and running 
 ### Download and Install
 
 ```bash
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/erickrenz/.dotfiles-mac/main/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/erickrenz/.dotfiles-mac/main/setup.sh)"
 ```
 
 ### Usage
