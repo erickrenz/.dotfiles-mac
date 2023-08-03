@@ -46,13 +46,6 @@
     - eslint
     - neovim
 
-- name: Install cargo packages
-  community.general.cargo:
-    name: "{{ item }}"
-    state: latest
-  loop:
-    - bacon
-
 - name: Install Neovim
   homebrew:
     name: "{{ item }}"

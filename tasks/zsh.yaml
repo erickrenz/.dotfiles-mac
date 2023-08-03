@@ -9,10 +9,10 @@
   register: oh_my_stats
 
 - name: Make zsh default
-  shell: chsh -s /usr/bin/zsh ekrenz
+  shell: chsh -s /usr/bin/zsh erickrenz
   when: oh_my_stats.stat.exists == False
 
 - name: Install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   when: oh_my_stats.stat.exists == False
-  become_user: ekrenz
+  # become_user: erickrenz
