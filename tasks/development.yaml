@@ -1,0 +1,82 @@
+- name: Install ansible dependencies
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - ansible
+    - git
+
+- name: Install basic development tools
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - bash
+    - gcc
+    - llvm 
+    - cmake
+    - qemu
+    - zsh
+
+- name: Install other languages and tools
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - node
+    - npm
+    - pnpm
+    - python
+    - ghcup
+    - go
+    - lua
+    - luarocks
+    - ocaml
+    - ruby
+    - sqlite
+
+- name: Install npm packages
+  npm:
+    name: "{{ item }}"
+    global: yes
+  loop:
+    - typescript
+    - typescript-language-server
+    - ts-node
+    - eslint
+    - neovim
+
+- name: Install cargo packages
+  community.general.cargo:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - bacon
+
+- name: Install Neovim
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - neovim
+    - ripgrep
+
+- name: Install miscelaneous utilities
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - neofetch 
+    - cmatrix 
+    - wget
+    - stow
+    - gh
+    - vercel-cli
+
+# - name: Install casks
+#   homebrew:
+#     name: "{{ item }}"
+#   loop:   
+#     - font-jetbrains-mono
+#     - homebrew/cask/kitty
+#     - homebrew/cask/alacritty

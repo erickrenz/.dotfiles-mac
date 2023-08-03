@@ -1,0 +1,2 @@
+- name: Stow dotfiles - Home
+  shell: make -C /home/ekrenz/.dotfiles/dotfiles

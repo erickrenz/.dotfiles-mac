@@ -1,9 +1,26 @@
-- name: Setup Fedora Developer Workstation
+- name: Setup Mac Developer Workstation
   hosts: all
   pre_tasks:
-    # Update homebrew and upgrade all packages
     - homebrew:
         update_homebrew: true
         upgrade_all: true
   tasks:
+    - name: Global Tasks
+      include_tasks: 
+        file: "{{ file }}"
+        apply:
+          tags:
+            - always
+      loop:    
+        - tasks/development.yaml
+        - tasks/git.yaml
+        - tasks/projects.yaml
+        - tasks/rust.yaml
+        # - tasks/stow.yaml
+        # - tasks/vscode.yaml
+        # - tasks/zsh.yaml
+      loop_control:
+        loop_var: file
+      tags:
+        - always
     
